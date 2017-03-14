@@ -5,8 +5,6 @@ module.exports = function(arr) {
         return arr
     };
 
-    let protect = 0;
-
     let isSwap = false;
     let i = 0;
 
@@ -16,11 +14,11 @@ module.exports = function(arr) {
             if (!isSwap) {
                 return arr;
             }
-            
+
             i = 0;
             isSwap = false;
             continue;
-        }   
+        }
 
         if (arr[i] > arr[i + 1]) {
             let lowest = arr[i];

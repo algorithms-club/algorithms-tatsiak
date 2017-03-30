@@ -3,7 +3,7 @@
 const algolib = require('../index.js');
 
 describe.only('#coverByTile', function()  {
-	
+
 	it('should count amount of tiles to cover area (integer)', function(){
 		let tilesAmount = algolib.coverByTile(5, 3, 2);
 

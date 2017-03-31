@@ -19,5 +19,3 @@ function beautifulYear(y) {
     return (y);
 };
 module.exports = beautifulYear
-
-console.log(beautifulYear(1987))

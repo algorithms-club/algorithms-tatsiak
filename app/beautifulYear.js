@@ -5,11 +5,19 @@ function beautifulYear(y) {
     while (true) {
         y = ++y;
         var str = String(y);
-        var set = new Set(str.split(''));
-        if (set.size == 4) {
+        var arr = str.split('');
+        var unique = [];
+        for (var i = 0; i < arr.length; i++) {
+            if (unique.indexOf(arr[i]) == -1){
+                unique.push(arr[i]);
+            }
+        }
+        if (unique.length == 4) {
             break;
         }
     }
     return (y);
 };
 module.exports = beautifulYear
+
+console.log(beautifulYear(1987))

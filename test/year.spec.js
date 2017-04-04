@@ -5,7 +5,7 @@
 
 const algolib = require('../index.js');
 
-describe.only('#beautifulYear', function () {
+describe('#beautifulYear', function () {
 
     it('Return minimum year number that is strictly larger than y and all its digits are distinct.', function () {
         let beautifulYear = algolib.beautifulYear(1987);

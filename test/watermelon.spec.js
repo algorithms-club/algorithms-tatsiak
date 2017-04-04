@@ -5,7 +5,7 @@
 
 const algolib = require('../index.js');
 
-describe.only('#divideWatermelon', function()  {
+describe('#divideWatermelon', function()  {
 
     it('Print Yes, if it is possible to divide watermelon into two parts, each of them has even weight', function () {
         let divideWatermelon = algolib.divideWatermelon(8);

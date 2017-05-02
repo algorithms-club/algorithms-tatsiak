@@ -24,6 +24,16 @@ class LinkedList {
             this._end = this._end._next;
         }
     }
+    pushIntoStart(value) {
+        if (this._start === null) {
+            this._start = new Node(value);
+            this._end = this._start;
+        } else {
+            this._start._previous = new Node(value);
+            this._start._next = this._start;
+            this._start = this._start._previous;
+        }
+    }
     pop() {
         if (this._start === null) {
             return;
@@ -37,16 +47,6 @@ class LinkedList {
         this._end._previous._next = null;
         this._end = this._end._previous;
         return last;
-    }
-    pushIntoStart(value) {
-        if (this._start === null) {
-            this._start = new Node(value);
-            this._end = this._start;
-        } else {
-            this._start._previous = new Node(value);
-            this._start._next = this._start;
-            this._start = new Node(value)
-        }
     }
 }
 

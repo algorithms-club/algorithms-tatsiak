@@ -5,7 +5,8 @@ let coverByTile = require('./app/coverBytTile');
 let divideWatermelon = require('./app/divideWatermelon');
 let beautifulYear = require('./app/beautifulYear');
 let UnionFind = require('./app/unionFind');
-let VeryBestSort = require('./app/veryBestSort');
+let insertionSort = require('./app/insertionSort');
+let isSorted = require('./app/isSorted');
 
 let algolib = {
     bubbleSort,
@@ -13,7 +14,8 @@ let algolib = {
     divideWatermelon,
     beautifulYear,
     UnionFind,
-    VeryBestSort,
+    insertionSort,
+    isSorted,
 }
 
 module.exports = algolib;

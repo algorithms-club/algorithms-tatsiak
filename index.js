@@ -7,6 +7,7 @@ let beautifulYear = require('./app/beautifulYear');
 let UnionFind = require('./app/unionFind');
 let insertionSort = require('./app/insertionSort');
 let isSorted = require('./app/isSorted');
+let numberComparator = require('./app/comparator');
 
 let algolib = {
     bubbleSort,
@@ -16,6 +17,7 @@ let algolib = {
     UnionFind,
     insertionSort,
     isSorted,
+    numberComparator,
 }
 
 module.exports = algolib;

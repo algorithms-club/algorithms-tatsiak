@@ -6,9 +6,9 @@ let divideWatermelon = require('./app/divideWatermelon');
 let beautifulYear = require('./app/beautifulYear');
 let UnionFind = require('./app/unionFind');
 let insertionSort = require('./app/insertionSort');
+let shellSort = require('./app/shellSort');
 let isSorted = require('./app/isSorted');
 let shuffle = require('./app/shuffle');
-let numberComparator = require('./app/comparator');
 
 let algolib = {
     bubbleSort,
@@ -17,8 +17,8 @@ let algolib = {
     beautifulYear,
     UnionFind,
     insertionSort,
+    shellSort,
     isSorted,
-    numberComparator,
     shuffle,
 }
 

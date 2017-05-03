@@ -1,7 +1,7 @@
 /**
  * Created by tatsiak on 4/1/17.
  */
-'use strict'
+'use strict';
 class QuickUnionWeighted {
     constructor() {
         this._elements = [];
@@ -12,13 +12,13 @@ class QuickUnionWeighted {
         if (isNaN(this._elements[a])) this._elements[a] = a;
         if (isNaN(this._elements[b])) this._elements[b] = b;
 
-        let parentA = this.component(a, this._elements);
-        let parentB = this.component(b, this._elements);
+        let parentA = this.component(a);
+        let parentB = this.component(b);
 
         if (isNaN(this._size[parentA])) this._size[parentA] = 1;
         if (isNaN(this._size[parentB])) this._size[parentB] = 1;
 
-        if (this._size[parentA] > this._size[parentB]) {
+        if (this._size[parentA] < this._size[parentB]) {
             this._elements[parentA] = parentB;
             this._size[parentB] += this._size[parentA];
         }
@@ -32,8 +32,8 @@ class QuickUnionWeighted {
         if (isNaN(this._elements[a]) || isNaN(this._elements[b])) {
             return false;
         }
-        let rootA = this.component(a, this._elements);
-        let rootB = this.component(b, this._elements);
+        let rootA = this.component(a);
+        let rootB = this.component(b);
         return rootA === rootB;
     }
 

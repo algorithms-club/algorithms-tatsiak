@@ -8,4 +8,12 @@ describe('shuffle', function() {
         let isSorted = algolib.isSorted(mixedArray);
         isSorted.should.be.false();
     });
+    it('should not loose any element while shuffling', function() {
+        let array = [1, 3, 4, 6, 7, 9];
+        let mixedArray = algolib.shuffle(array);
+        let isSorted = algolib.isSorted(mixedArray);
+        isSorted.should.be.false();
+        let sorted = algolib.insertionSort(mixedArray)
+        sorted.should.be.eql(array)
+    });
 });

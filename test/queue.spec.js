@@ -9,6 +9,8 @@ describe('#queue', function () {
             queue.push(9);
             queue.push(7);
             queue.pop().should.be.eql(3);
+            queue.pop().should.be.eql(9);
+            queue.pop().should.be.eql(7);
         })
     });
     describe('#push', function () {

@@ -5,9 +5,11 @@ let coverByTile = require('./app/coverBytTile');
 let divideWatermelon = require('./app/divideWatermelon');
 let beautifulYear = require('./app/beautifulYear');
 let UnionFind = require('./app/unionFind');
+
 let LinkedList = require('./app/linkedList');
 let Stack = require('./app/stack');
 let Queue = require('./app/queue');
+let QuickUnionWeighted = require('./app/quickUnionWeighted');
 
 let algolib = {
     bubbleSort,
@@ -18,6 +20,8 @@ let algolib = {
     LinkedList,
     Stack,
     Queue,
-}
+    QuickUnionWeighted,
+};
+
 
 module.exports = algolib;

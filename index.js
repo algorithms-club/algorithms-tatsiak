@@ -6,6 +6,7 @@ let divideWatermelon = require('./app/divideWatermelon');
 let beautifulYear = require('./app/beautifulYear');
 let UnionFind = require('./app/unionFind');
 let LinkedList = require('./app/linkedList');
+let QuickUnionWeighted = require('./app/quickUnionWeighted');
 
 let algolib = {
     bubbleSort,
@@ -13,7 +14,9 @@ let algolib = {
     divideWatermelon,
     beautifulYear,
     UnionFind,
-    LinkedList
-}
+    LinkedList,
+    QuickUnionWeighted,
+};
+
 
 module.exports = algolib;

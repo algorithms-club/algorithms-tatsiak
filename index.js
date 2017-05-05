@@ -9,6 +9,7 @@ let insertionSort = require('./app/insertionSort');
 let shellSort = require('./app/shellSort');
 let isSorted = require('./app/isSorted');
 let shuffle = require('./app/shuffle');
+let QuickUnionWeighted = require('./app/quickUnionWeighted');
 
 let algolib = {
     bubbleSort,
@@ -20,6 +21,7 @@ let algolib = {
     shellSort,
     isSorted,
     shuffle,
-}
+    QuickUnionWeighted,
+};
 
 module.exports = algolib;

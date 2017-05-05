@@ -1,7 +1,6 @@
 'use strict'
-var Comparator = require('./comparator.js');
 
-module.exports = function (collection) {
+module.exports = function (collection, comparator) {
     if(!collection.length){
         return;
     }
@@ -9,7 +8,7 @@ module.exports = function (collection) {
     for (let i = 1; i < collection.length; i++) {
         valueToInsert = collection[i];
         positionToInsert = i;
-        while (positionToInsert > 0 && Comparator(collection[positionToInsert-1], valueToInsert)) {
+        while (positionToInsert > 0 && comparator(collection[positionToInsert-1], valueToInsert)) {
             collection[positionToInsert] = collection[positionToInsert - 1];
             positionToInsert --;
         }

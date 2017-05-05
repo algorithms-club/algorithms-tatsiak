@@ -4,7 +4,10 @@ module.exports = function (collection, comparator) {
     if (!collection.length) {
         return;
     }
-    var interval = collection.length, valueToInsert, outer, inner;
+    var interval = collection.length;
+    var valueToInsert;
+    var outer;
+    var inner;
     while (interval > 0) {
         for (outer = interval; outer < collection.length; outer++) {
             valueToInsert = collection[outer];

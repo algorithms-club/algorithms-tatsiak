@@ -39,5 +39,18 @@ describe('#linkedList', function () {
             linkedList.pop().should.be.eql(1);
             linkedList.pop().should.be.eql(3);
         });
+        it('should not left any data in list after last pop', function () {
+            let linkedList = new algolib.LinkedList();
+            linkedList.pushIntoStart(1);
+            linkedList.pushIntoEnd(2);
+            linkedList.pushIntoStart(3);
+            linkedList.pushIntoEnd(4);
+            linkedList.pop().should.be.eql(4);
+            linkedList.pop().should.be.eql(2);
+            linkedList.pop().should.be.eql(1);
+            linkedList.pop().should.be.eql(3);
+            var lastPop = linkedList.pop();
+            (lastPop === undefined).should.be.true();
+        });
     })
 });

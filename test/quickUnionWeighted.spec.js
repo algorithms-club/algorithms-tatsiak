@@ -4,7 +4,7 @@
 'use strict'
 const algolib = require('../index.js');
 
-describe.only('#quickUnionWeighted', function () {
+describe('#quickUnionWeighted', function () {
 
     describe('#connect', function () {
         it('should return true if elements are connected', function () {

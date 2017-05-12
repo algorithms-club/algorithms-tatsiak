@@ -9,6 +9,7 @@ let insertionSort = require('./app/insertionSort');
 let shellSort = require('./app/shellSort');
 let isSorted = require('./app/isSorted');
 let shuffle = require('./app/shuffle');
+let LinkedList = require('./app/linkedList');
 let QuickUnionWeighted = require('./app/quickUnionWeighted');
 
 let algolib = {
@@ -21,7 +22,9 @@ let algolib = {
     shellSort,
     isSorted,
     shuffle,
+    LinkedList,
     QuickUnionWeighted,
 };
+
 
 module.exports = algolib;

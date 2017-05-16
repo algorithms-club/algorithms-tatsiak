@@ -1,7 +1,7 @@
 'use strict';
 
-const algolib = require('../index.js');
-const comparator = require('../app/comparator').compareNumbers;
+var algolib = require('../index.js');
+var comparator = require('../app/comparator').compareNumbers;
 
 describe('isSorted', function() {
     it('should return true if sorted array was passed', function() {

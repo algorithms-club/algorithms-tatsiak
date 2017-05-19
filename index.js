@@ -7,6 +7,7 @@ let beautifulYear = require('./app/beautifulYear');
 let UnionFind = require('./app/unionFind');
 let insertionSort = require('./app/insertionSort');
 let shellSort = require('./app/shellSort');
+let mergeSort = require('./app/mergeSort');
 let isSorted = require('./app/isSorted');
 let shuffle = require('./app/shuffle');
 let LinkedList = require('./app/linkedList');
@@ -20,6 +21,7 @@ let algolib = {
     UnionFind,
     insertionSort,
     shellSort,
+    mergeSort,
     isSorted,
     shuffle,
     LinkedList,

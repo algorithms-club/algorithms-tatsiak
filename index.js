@@ -8,8 +8,10 @@ let UnionFind = require('./app/unionFind');
 let insertionSort = require('./app/insertionSort');
 let shellSort = require('./app/shellSort');
 let mergeSort = require('./app/mergeSort');
+let quickSort = require('./app/quickSort');
 let isSorted = require('./app/isSorted');
 let shuffle = require('./app/shuffle');
+let swap = require('./app/swap');
 let LinkedList = require('./app/linkedList');
 let QuickUnionWeighted = require('./app/quickUnionWeighted');
 
@@ -22,8 +24,10 @@ let algolib = {
     insertionSort,
     shellSort,
     mergeSort,
+    quickSort,
     isSorted,
     shuffle,
+    swap,
     LinkedList,
     QuickUnionWeighted,
 };

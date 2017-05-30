@@ -2,7 +2,7 @@
 
 let algolib = require('../index.js');
 let comparator = require('../app/comparator').compareNumbers;
-let sort = algolib.quickSort;
+let sort = algolib.quickSortLomuto;
 let testArrays = require('../test/testArrays');
 
 

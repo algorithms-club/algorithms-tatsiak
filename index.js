@@ -10,6 +10,7 @@ let shellSort = require('./app/shellSort');
 let mergeSort = require('./app/mergeSort');
 let quickSortLomuto = require('./app/quickSortLomutoPartitionScheme');
 let quickSortHoare = require('./app/quickSortHoarePartitionScheme');
+let heapSort = require('./app/heapSort');
 let isSorted = require('./app/isSorted');
 let shuffle = require('./app/shuffle');
 let swap = require('./app/swap');
@@ -27,6 +28,7 @@ let algolib = {
     mergeSort,
     quickSortLomuto,
     quickSortHoare,
+    heapSort,
     isSorted,
     shuffle,
     swap,

@@ -10,7 +10,6 @@ module.exports = function (collection, comparator) {
         }
         return collection;
     }
-
     function partition(collection, start, end) {
         let pivotElement = start;
         let i = start - 1;
@@ -18,21 +17,21 @@ module.exports = function (collection, comparator) {
         do {
             do {
                 i++;
-            } while (!comparator(collection[i], collection[pivotElement]));
+            } while (comparator(collection[pivotElement], collection[i]));
 
             do {
                 j--;
-            } while (comparator(collection[pivotElement], collection[j]));
+            } while (comparator(collection[j], collection[pivotElement]));
 
             if (i >= j) {
                 return j;
             }
             swap(collection, i, j);
 
-        } while ( i >= j)
+        } while (true)
     }
     // collection = shuffle(collection);
     collection = quickSort(collection, 0, collection.length - 1);
-    console.log(collection)
+    console.log(collection);
     return collection
 };

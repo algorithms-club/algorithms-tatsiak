@@ -6,7 +6,7 @@ let sort = algolib.heapSort;
 let testArrays = require('../test/testArrays');
 
 
-describe.only('heapSort', function() {
+describe('heapSort', function() {
     it('should return sorted array if sorted array was passed', function() {
         console.time("time for sorting with sortedArray");
         var sortedArr = sort(testArrays.sortedArray, comparator);

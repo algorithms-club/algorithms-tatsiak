@@ -8,7 +8,7 @@ while(testArray.length<160){
     testArray.push(Math.round(Math.random() * 999));
 }
 
-describe.only('mergeSort', function() {
+describe('mergeSort', function() {
     it('should return sorted array if sorted array was passed', function() {
         var sortedArr = algolib.mergeSort(testArray, comparator);
         algolib.isSorted(sortedArr, comparator).should.be.true();

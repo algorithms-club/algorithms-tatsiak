@@ -2,11 +2,11 @@
 
 let algolib = require('../index.js');
 let comparator = require('../app/comparator').compareNumbers;
-let sort = algolib.quickSortLomuto;
+let sort = algolib.quickSortHoare;
 let testArrays = require('../test/testArrays');
 
 
-describe.only('quickSort', function() {
+describe('quickSort', function() {
     it('should return sorted array if sorted array was passed', function() {
         console.time("time for sorting with sortedArray");
         var sortedArr = sort(testArrays.sortedArray, comparator);

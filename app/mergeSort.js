@@ -1,7 +1,7 @@
 'use strict'
 
 module.exports = function mergeSort (collection, comparator) {
-    if (!collection.length || collection.length === 1) {
+    if (!collection.length <= 1) {
         return collection;
     }
     else {

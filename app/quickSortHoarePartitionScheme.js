@@ -32,6 +32,5 @@ module.exports = function (collection, comparator) {
     }
     // collection = shuffle(collection);
     collection = quickSort(collection, 0, collection.length - 1);
-    console.log(collection);
     return collection
 };

@@ -2,6 +2,9 @@
 let swap = require('./swap');
 let shuffle = require('./shuffle');
 module.exports = function (collection, comparator) {
+    if (!collection.length <= 1) {
+        return collection;
+    }
     function quickSort(collection, start, end){
         if(start < end){
             let partitionElement = partition(collection, start, end);

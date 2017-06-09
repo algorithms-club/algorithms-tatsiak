@@ -1,22 +1,60 @@
-/**
- * Created by tatsiak on 4/22/17.
- */
 'use strict';
 
 class Node {
-    constructor(left, key, value, right, parent) {
-        this._left = left;
-        this._right = right;
-        this._parent = parent;
-        this._key = key;
-        this._value = value
+    constructor(value) {
+        this.value = value;
+        this.left = null;
+        this.right = null;
     }
 }
 
 
 class BST {
-    addNode(node);
-    findNode(node);
+    constructor() {
+        this.root = null;
+    }
+    add(value) {
+        let tempNode = new Node(value);
+        let currentNode;
+        let parrentNode;
+        let root = this.root;
+        console.log('vars')
+
+        if (root === null) {
+            console.log('root = nan')
+            this.root = tempNode;
+            return;
+        } else {
+            console.log('else')
+            currentNode = this.root;
+            parrentNode = null;
+            while (true) {
+                // console.log('while')
+                parrentNode = currentNode;
+                if (value < parrentNode.value) {
+                    console.log('left')
+                    currentNode = currentNode.left;
+                    if (currentNode === null) {
+                        parrentNode.left = tempNode
+                        return
+                    }
+                } else {
+                    console.log('right')
+                    currentNode = currentNode.right;
+
+
+                    if (currentNode === null) {
+                        parrentNode.right = tempNode;
+                        return
+                    }
+                }
+            }
+        }
+
+    }
+    find(value){
+
+    }
 }
 
 module.exports = BST;

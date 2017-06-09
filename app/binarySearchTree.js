@@ -52,9 +52,10 @@ class BST {
         }
 
     }
-    find(value){
-
+    findNode(value){
     }
+    findMax(){}
+    findMin(){}
 }
 
 module.exports = BST;

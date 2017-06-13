@@ -49,11 +49,7 @@ class BST {
     }
 
     findMax(root) {
-        if (root.right === null) {
-            console.log(root.value)
-            return root.value;
-        }
-        else this.findMax(root.right);
+        return (root.right === null) ? root.value : this.findMax(root.right)
     }
 
     findMin() {

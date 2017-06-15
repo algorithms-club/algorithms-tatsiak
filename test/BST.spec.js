@@ -24,10 +24,35 @@ describe.only('#Binnary Search Tree', function () {
             BST.add(5);
             BST.add(9);
             BST.add(12);
-            console.log(BST.root)
             let maxElement = BST.findMax(BST.root);
-            console.log(maxElement);
             maxElement.should.be.eql(422)
+        })
+    });
+    describe('#findMin', function () {
+        it('should return in element in tree', function () {
+            let BST = new algolib.BST();
+            BST.add(50);
+            BST.add(4);
+            BST.add(422);
+            BST.add(5);
+            BST.add(9);
+            BST.add(12);
+            let minElement = BST.findMin(BST.root);
+            minElement.should.be.eql(4)
+        })
+    });
+    describe('#findNode', function () {
+        it('should search node with given value and return it', function () {
+            let BST = new algolib.BST();
+            BST.add(50);
+            BST.add(4);
+            BST.add(422);
+            BST.add(5);
+            BST.add(9);
+            BST.add(12);
+            console.log(BST.root)
+            let node = BST.findNode(50, BST.root);
+            console.log(node)
         })
     });
 });

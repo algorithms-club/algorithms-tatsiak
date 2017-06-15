@@ -45,14 +45,28 @@ class BST {
 
     }
 
-    findNode(value) {
+    findNode(value, root) {
+        if (root !== null) {
+            if (root.value === value) {
+                return root;
+            } else {
+                var result = findNode(value, root.left);
+                if (result === null) {
+                    result = findNode(value, root.right);
+                }
+                return result;
+            }
+        } else {
+            return null;
+        }
     }
 
     findMax(root) {
         return (root.right === null) ? root.value : this.findMax(root.right)
     }
 
-    findMin() {
+    findMin(root) {
+        return (root.left === null) ? root.value : this.findMin(root.left)
     }
 }
 

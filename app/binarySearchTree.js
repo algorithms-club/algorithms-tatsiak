@@ -50,9 +50,9 @@ class BST {
             if (root.value === value) {
                 return root;
             } else {
-                var result = findNode(value, root.left);
+                var result = this.findNode(value, root.left);
                 if (result === null) {
-                    result = findNode(value, root.right);
+                    result = this.findNode(value, root.right);
                 }
                 return result;
             }

@@ -50,9 +50,10 @@ describe.only('#Binnary Search Tree', function () {
             BST.add(5);
             BST.add(9);
             BST.add(12);
-            console.log(BST.root)
-            let node = BST.findNode(50, BST.root);
-            console.log(node)
+            let node = BST.findNode(4, BST.root);
+            node.value.should.be.eql(4)
+            let node1 = BST.findNode(5, BST.root);
+            node1.value.should.be.eql(5)
         })
     });
 });

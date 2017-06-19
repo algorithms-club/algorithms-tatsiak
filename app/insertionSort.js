@@ -12,7 +12,6 @@ module.exports = function (collection, comparator) {
             collection[positionToInsert] = collection[positionToInsert - 1];
             positionToInsert --;
         }
-        amountOfCompares++;
         if(positionToInsert!==i) {
             collection[positionToInsert] = valueToInsert;
         }

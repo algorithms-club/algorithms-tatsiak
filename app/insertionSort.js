@@ -9,18 +9,13 @@ module.exports = function (collection, comparator) {
         valueToInsert = collection[i];
         positionToInsert = i;
         while (positionToInsert > 0 && comparator(collection[positionToInsert-1], valueToInsert)) {
-            amountOfCompares++;
             collection[positionToInsert] = collection[positionToInsert - 1];
-            amountOfSwaps++;
             positionToInsert --;
         }
         amountOfCompares++;
         if(positionToInsert!==i) {
             collection[positionToInsert] = valueToInsert;
-            amountOfSwaps++;
         }
     }
-    console.log('This sorting algorithm used comparator '+ amountOfCompares + ' times.');
-    console.log('And swapped elements '+ amountOfSwaps + ' times.');
     return collection;
 };

@@ -15,8 +15,8 @@ describe.only('#Llrb', function () {
     });
     it('Llrb insert element', function () {
         const tree = new algolib.LLRB();
-        tree.insert(4,'algorithms');
-        tree.insert(8,'new value');
+        tree.root = tree.insert(tree.root, 4,'algorithms');
+        tree.root = tree.insert(tree.root, 8,'new value');
         console.log(tree)
         tree.root.right.key.should.be.eql(8);
         tree.root.right.value.should.be.eql('new value');

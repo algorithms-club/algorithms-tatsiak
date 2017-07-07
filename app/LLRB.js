@@ -17,24 +17,11 @@ class Llrb {
         }
     }
 
-    _buildFromArray(elements) {}
-
-    _findPlace(node, key){
-        if (node.key > key){
-            if (node.left === null){
-                return node
-            }
-            this._findPlace(node.left, key)
-        } else if (node.key < key){
-            if (node.right === null){
-                return node
-            }
-            this._findPlace(node.right, key)
-        }
-
+    _buildFromArray(elements) {
     }
 
-    _rotateLeft(node){
+
+    _rotateLeft(node) {
         let x = node.right;
         node.right = x.left;
         x.left = node;
@@ -42,7 +29,8 @@ class Llrb {
         x.left.isRed = true;
         return x;
     }
-    _rotateRight(node){
+
+    _rotateRight(node) {
         let x = node.left;
         node.left = x.right;
         x.right = node;
@@ -50,49 +38,46 @@ class Llrb {
         x.right.isRed = true;
         return x;
     }
-    _flipColor(node){
-        node.isRed       = !node.isRed;
-        node.left.isRed  = !node.left.isRed;
+
+    _flipColor(node) {
+        node.isRed = !node.isRed;
+        node.left.isRed = !node.left.isRed;
         node.right.isRed = !node.right.isRed;
         return node;
     }
 
 
-    insert(key, value) {
-        if (!this.root) {
-            return this.root = new Node(key, value)
-        }
+    insert(node, key, value) {
+        if (node === null) return new Node(key, value);
 
-        // if left and right = red -> this.flipColor()
-        if ()
-
-        let parent = this._findPlace(this.root, key);
-        if (parent.key < key){
-            parent.right = new Node(key, value)
-        } else if (parent.key > key){
-            parent.left = new Node(key, value)
-        } else {
-            parent.value = value;
+        if (key === node.key) {
+            node.value = value;
+            return node;
         }
+        else if (key < node.key) node.left = this.insert(node.left, key, value);
+        else node.right = this.insert(node.right, key, value);
+
         //balance tree
-        if (parent.right.isRed === true){
-            parent = this._rotateLeft(parent)
+        if (node.right !== null && node.left !== null) {
+            if (node.right.isRed) node = this._rotateLeft(node);
+            if (node.left.isRed && node.left.left.isRed) node = this._rotateRight(node);
+            if (node.left.isRed && node.right.isRed) this._flipColor(node);
         }
 
-        // if node.right  = red -> this._rotateLeft()
-        // if left and right = red -> this.flipColor()
-        // node.left = red and node.left.left = red -> this._rotateRight()
+        return node;
     }
 
     find() {
     }
 
-    sortDesc(){}
-    sortAsc(){}
+    sortDesc() {
+    }
+
+    sortAsc() {
+    }
 
     getMax(root) {
-        return (root.right === null) ? root.value : this.findMax(root.right)
-
+        return (root.right === null) ? root.value : this.getMax(root.right)
     }
 
     getMin(root) {

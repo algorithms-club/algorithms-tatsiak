@@ -18,6 +18,9 @@ class Llrb {
     }
 
     _buildFromArray(elements) {
+        elements.forEach((item) => {
+            this.root = this.insert(this.root, item[0], item[1])
+        })
     }
 
 

@@ -22,4 +22,11 @@ describe.only('#Llrb', function () {
         tree.root.right.value.should.be.eql('new value');
         should(tree.root).be.ok();
     });
+    it.only('Llrb build from array', function () {
+        const tree = new algolib.LLRB([[4,'algorithms'],[2,'algorithms blah'],[11,'algorithms rfrfr'],[21,'azaza'],[5,'kwkwkwk']]);
+        console.log(tree)
+        // tree.root.right.key.should.be.eql(8);
+        // tree.root.right.value.should.be.eql('new value');
+        // should(tree.root).be.ok();
+    });
 });

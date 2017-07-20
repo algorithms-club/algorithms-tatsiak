@@ -1,10 +1,10 @@
 'use strict'
 
 module.exports = function (collection, comparator) {
-    if(!collection.length){
-        return;
+    if (!collection.length <= 1) {
+        return collection;
     }
-    let positionToInsert, valueToInsert;
+    let positionToInsert, valueToInsert, amountOfCompares = 0, amountOfSwaps = 0;
     for (let i = 1; i < collection.length; i++) {
         valueToInsert = collection[i];
         positionToInsert = i;

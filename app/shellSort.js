@@ -1,8 +1,8 @@
 'use strict'
 
 module.exports = function (collection, comparator) {
-    if (!collection.length) {
-        return;
+    if (!collection.length <= 1) {
+        return collection;
     }
     var interval = collection.length;
     var valueToInsert;

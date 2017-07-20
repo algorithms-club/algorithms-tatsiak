@@ -7,8 +7,13 @@ let beautifulYear = require('./app/beautifulYear');
 let UnionFind = require('./app/unionFind');
 let insertionSort = require('./app/insertionSort');
 let shellSort = require('./app/shellSort');
+let mergeSort = require('./app/mergeSort');
+let quickSortLomuto = require('./app/quickSortLomutoPartitionScheme');
+let quickSortHoare = require('./app/quickSortHoarePartitionScheme');
+let heapSort = require('./app/heapSort');
 let isSorted = require('./app/isSorted');
 let shuffle = require('./app/shuffle');
+let swap = require('./app/swap');
 let LinkedList = require('./app/linkedList');
 let QuickUnionWeighted = require('./app/quickUnionWeighted');
 
@@ -20,8 +25,13 @@ let algolib = {
     UnionFind,
     insertionSort,
     shellSort,
+    mergeSort,
+    quickSortLomuto,
+    quickSortHoare,
+    heapSort,
     isSorted,
     shuffle,
+    swap,
     LinkedList,
     QuickUnionWeighted,
 };

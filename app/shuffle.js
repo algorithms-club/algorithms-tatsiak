@@ -4,7 +4,7 @@ module.exports = function (collection) {
         return;
     }
     let element, randomValue;
-    for (let i = 0; i < collection.length-1; i++) {
+    for (let i = 0; i < collection.length; i++) {
         element = collection[i];
         randomValue = Math.floor(Math.random() * i);
         collection[i] = collection[randomValue];
@@ -12,3 +12,4 @@ module.exports = function (collection) {
     }
     return collection;
 };
+

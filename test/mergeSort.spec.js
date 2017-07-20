@@ -3,10 +3,10 @@
 let algolib = require('../index.js');
 let comparator = require('../app/comparator').compareNumbers;
 let testArrays = require('../test/testArrays');
-let sort = algolib.bubbleSort;
+let sort = algolib.mergeSort;
 
 
-describe('bubbleSort', function() {
+describe('mergeSort', function() {
     it('should return sorted array if sorted array was passed', function() {
         var sortedArr = sort(testArrays.sortedArray, comparator);
         algolib.isSorted(sortedArr, comparator).should.be.true();

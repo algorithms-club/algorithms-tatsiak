@@ -11,6 +11,7 @@ let isSorted = require('./app/isSorted');
 let shuffle = require('./app/shuffle');
 let LinkedList = require('./app/linkedList');
 let QuickUnionWeighted = require('./app/quickUnionWeighted');
+let textJustify = require('./app/textJustify');
 
 let algolib = {
     bubbleSort,
@@ -24,6 +25,7 @@ let algolib = {
     shuffle,
     LinkedList,
     QuickUnionWeighted,
+    textJustify
 };
 
 

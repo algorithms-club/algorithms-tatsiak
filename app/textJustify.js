@@ -6,6 +6,12 @@ var jsgraphs = require('js-graph-algorithms');
 
 
 function textJustify(text, pageWidth) {
+
+    //replace all space characters to just ' '
+    // make an array with indexes of all spaces in string
+    // create graph using !!two cycles with weights from one space character to another
+
+
     let words = text.split(" ");
     let weightedGraph = new jsgraphs.WeightedDiGraph(words.length);
     //fulfill graph

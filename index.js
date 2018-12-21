@@ -11,6 +11,7 @@ let isSorted = require('./app/isSorted');
 let shuffle = require('./app/shuffle');
 let LinkedList = require('./app/linkedList');
 let QuickUnionWeighted = require('./app/quickUnionWeighted');
+let LLRB = require('./app/LLRB');
 let BST = require('./app/binarySearchTree');
 
 let algolib = {
@@ -25,6 +26,7 @@ let algolib = {
     shuffle,
     LinkedList,
     QuickUnionWeighted,
+    LLRB,
     BST,
 };
 

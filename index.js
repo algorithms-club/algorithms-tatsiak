@@ -12,6 +12,7 @@ let shuffle = require('./app/shuffle');
 let LinkedList = require('./app/linkedList');
 let QuickUnionWeighted = require('./app/quickUnionWeighted');
 let LLRB = require('./app/LLRB');
+let BST = require('./app/binarySearchTree');
 
 let algolib = {
     bubbleSort,
@@ -26,6 +27,7 @@ let algolib = {
     LinkedList,
     QuickUnionWeighted,
     LLRB,
+    BST,
 };
 
 
